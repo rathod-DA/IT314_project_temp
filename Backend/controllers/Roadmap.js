@@ -62,17 +62,18 @@ export const generateRoadmap = async (req, res) => {
         roadmapData.videos = videos;
 
         // Save to database
-        const user = await UserModel.findById(userId);
-        if (!user) {
-            return res.status(404).json({ success: false, message: 'User not found' });
-        }
-        const newRoadmap = new RoadmapModel({
-            email: user.email,
-            roadmapData: roadmapData,
-        });
-        await newRoadmap.save();
+        // const user = await UserModel.findById(userId);
+        // if (!user) {
+        //     return res.status(404).json({ success: false, message: 'User not found' });
+        // }
+        // const newRoadmap = new RoadmapModel({
+        //     email: user.email,
+        //     roadmapData: roadmapData,
+        // });
+        // await newRoadmap.save();
 
         console.log('Roadmap generated successfully');
+        console.log("Generated Roadmap Data:", JSON.stringify(roadmapData, null, 2));
         const endTime = new Date().toLocaleString();
         console.log(`Total time: ${endTime} - ${initTime}`);
 

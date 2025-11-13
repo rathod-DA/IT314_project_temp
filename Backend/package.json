@@ -14,6 +14,7 @@
     "@google/genai": "^1.27.0",
     "axios": "^1.12.2",
     "bcryptjs": "^3.0.2",
+    "cheerio": "^1.1.2",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
@@ -23,6 +24,7 @@
     "mongoose": "^8.18.1",
     "nodemailer": "^7.0.6",
     "nodemon": "^3.1.10",
+    "puppeteer": "^24.27.0",
     "zod": "^4.1.9"
   }
 }
